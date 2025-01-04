@@ -1,0 +1,40 @@
+html {
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--clr-bg);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-2);
+    font-size: var(--fs-4);
+    color: var(--clr-text-dark);
+    letter-spacing: var(--ls-4);
+}
+
+p, li, figcaption {
+    text-wrap: pretty;
+    max-inline-size: 65ch;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}

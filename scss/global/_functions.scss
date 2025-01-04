@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:meta';
 
 @function rem($px) {
     @if math.is-unitless($px) {
@@ -19,11 +20,11 @@
 // Helper function to round to the specified number of decimals
 @function round-to-decimals($value, $decimals) {
 
-  @if not type-of($value) == 'number' {
+  @if not meta.type-of($value) == 'number' {
     @error "Invalid value for rounding. Expected a number, got #{$value}.";
   }
 
-  @if not type-of($decimals) == 'number' or $decimals < 0 or math.floor($decimals) != $decimals {
+  @if not meta.type-of($decimals) == 'number' or $decimals < 0 or math.floor($decimals) != $decimals {
     @error "Invalid number of decimals. Expected a positive integer, got #{$decimals}.";
   }
 
@@ -35,8 +36,7 @@
   @return math.div($value, 16);
 }
 
-/* Inspired by (https://chriskirknielsen.com/blog/modern-fluid-typography-with-clamp/),
-and it has been modified and streamlined for wider usage. */
+// Inspired by (https://chriskirknielsen.com/blog/modern-fluid-typography-with-clamp/),and it has been modified and streamlined for wider usage.
 @function fluid($min-value, $max-value, $min-vw, $max-vw, $unit:px) {
 
   // Check for valid units in the first four parameters
