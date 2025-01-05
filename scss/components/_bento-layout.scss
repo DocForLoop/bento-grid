@@ -1,1 +1,108 @@
 @use 'global/functions' as * ;
+
+.features {
+    display: grid;
+    gap: 32px;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'c1'
+    'c2'
+    'c3'
+    'c4'
+    'c5'
+    'c6'
+    'c7'
+    'c8';
+}
+
+.features-card-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+
+    &__figure {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        align-items: center;
+    }
+}
+
+.features-card-2 {
+
+    &__figure {
+        display: flex;
+        flex-direction: column;
+        /* row-gap: 16px; */
+        row-gap: fluid(16, 54.46, 375, 768);
+    }
+}
+
+.features-card-3 {
+    overflow: clip;
+
+    &__figure {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+}
+
+.features-card-4 {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        align-items: center;
+    }
+
+    &__figure {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        align-items: center;
+    }
+}
+
+.features-card-5 {
+    
+    &__figure {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.features-card-6 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+}
+
+.features-card-7 {
+    
+    &__figure {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+}
+
+.features-card-8 {
+
+    &__figure {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+}

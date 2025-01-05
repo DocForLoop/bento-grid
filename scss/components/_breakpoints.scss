@@ -1,1 +1,22 @@
 @use 'global/functions' as *;
+
+/* @media (width > em(545)) {
+
+    .features {
+        grid-template-areas: 
+        'c1 c1'
+        'c2 c3'
+        'c4 c4'
+        'c5 c5'
+        'c6 c6'
+        'c7 c8';
+    }
+
+    .features-card-5 {
+        text-align: start;
+
+        &__figure {
+            flex-direction: row;
+        }
+    }
+} */

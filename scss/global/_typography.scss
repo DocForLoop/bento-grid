@@ -7,6 +7,14 @@
     font-weight: 400 500;
 }
 
+@font-face {
+    font-display: swap; 
+    font-family: 'DM Sans';
+    src: url('../assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype-variations');
+    font-weight: 500;
+    font-style: italic;
+}
+
 :root {
     --ff-primary: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
     --fs-1: #{fluid(46, 62, 375, 1440, rem)};
@@ -15,15 +23,15 @@
     --fs-4: #{rem(18)};
     --fw-1: 400;
     --fw-2: 500;
-    --lh-1: #{fluid(42, 58, 375, 1440)};
-    --lh-2: #{fluid(28, 36, 375, 1440)};
-    --lh-3: #{fluid(24, 28, 375, 1440)};
+    --lh-1: #{fluid(42, 58, 375, 1440, rem)};
+    --lh-2: #{fluid(28, 36, 375, 1440, rem)};
+    --lh-3: #{fluid(24, 28, 375, 1440, rem)};
     --lh-4: calc(20 / 18);
-    --ls-1-desk: #{rem(-3)};
-    --ls-2-desk: #{rem(-2)};
-    --ls-3-desk: #{rem(-2)};
-    --ls-1-mob-tab: #{rem(-4)};
-    --ls-2-mob-tab: #{rem(-6)};
-    --ls-3-mob-tab: #{rem(-6)};
+    --ls-1-desk: calc(-3 / 100 * var(--fs-1));
+    --ls-2-desk: calc(-2 / 100 * var(--fs-2));
+    --ls-3-desk: calc(-2 / 100 * var(--fs-3));
+    --ls-1-mob-tab: calc(-4 / 100 * var(--fs-1));
+    --ls-2-mob-tab: calc(-6 / 100 * var(--fs-2));
+    --ls-3-mob-tab: calc(-6 / 100 * var(--fs-3));
     --ls-4: 0;
 }
