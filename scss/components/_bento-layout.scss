@@ -34,7 +34,6 @@
     &__figure {
         display: flex;
         flex-direction: column;
-        /* row-gap: 16px; */
         row-gap: fluid(16, 54.46, 375, 768);
     }
 }

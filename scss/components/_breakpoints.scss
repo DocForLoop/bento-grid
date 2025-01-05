@@ -1,15 +1,38 @@
 @use 'global/functions' as *;
 
-/* @media (width > em(545)) {
+@container (width > #{em(384)}) {
+    .features-card-6 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 
+@media (width > em(545)) {
     .features {
-        grid-template-areas: 
+        grid-template-areas:
         'c1 c1'
         'c2 c3'
         'c4 c4'
         'c5 c5'
         'c6 c6'
         'c7 c8';
+    }
+
+    .features-card-2 {
+        &__caption-text {
+            max-inline-size: 14ch;
+        }
+    }
+
+    .features-card-3 {
+        max-block-size: rem(247);
+    }
+
+    .features-card-4 {
+        &__caption-text {
+            padding-inline: 0;
+        }
     }
 
     .features-card-5 {
@@ -19,4 +42,9 @@
             flex-direction: row;
         }
     }
-} */
+    
+    .features-card-7 {
+        padding-inline: 24px;
+    }
+}
+

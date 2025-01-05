@@ -14,28 +14,29 @@ main {
 }
 
 .features {
-
+    
     &-card-1 {
         grid-area: c1;
     }
-
+    
     &-card-2 {
         grid-area: c2;
     }
-
+    
     &-card-3 {
         grid-area: c3;
     }
-
+    
     &-card-4 {
         grid-area: c4;
     }
-
+    
     &-card-5 {
         grid-area: c5;
     }
-
-    &-card-6 {
+    
+    &-card-6-container {
+        container-type: inline-size;
         grid-area: c6;
     }
 
@@ -49,8 +50,6 @@ main {
 }
 
 .features-card-1 {
-    /* padding-inline: 32px;
-    padding-block: 40px; */
     padding-inline: fluid(32, 76, 375, 768);
     padding-block: fluid(40, 72, 375, 768);
     text-align: center;
@@ -80,11 +79,19 @@ main {
 }
 
 .features-card-2 {
-    /* padding: 16px; */
-    padding: fluid(16, 24, 375, 768);
+    padding-block: fluid(16, 24, 375, 768);
+    padding-inline-start: fluid(16, 24, 375, 768);
     text-align: start;
     background-color: var(--clr-text-light);
-    
+    overflow: clip;
+
+    &__image {
+        width: rem(316); 
+        height: rem(66); 
+        object-fit: cover;
+        object-position:left;
+    }
+
     &__caption-text {
         font-size: var(--fs-3);
         line-height: var(--lh-3);
@@ -94,11 +101,9 @@ main {
 }
 
 .features-card-3 {
-    /* padding-inline: 16px;
-    padding-block-start: 16px; */
     padding-inline: fluid(16, 24, 375, 768);
     padding-block-start: fluid(16, 24, 375, 768);
-    block-size: rem(216);
+    max-block-size: rem(216);
     text-align: start;
     background-color: var(--clr-primary-2);
 
@@ -106,7 +111,7 @@ main {
         font-size: var(--fs-3);
         line-height: var(--lh-3);
         letter-spacing: var(--ls-3-mob-tab);
-        max-inline-size: 17ch;
+        max-inline-size: 16ch;
     }
 }
 
@@ -172,7 +177,10 @@ main {
 }
 
 .features-card-7 {
-    padding: 32px;
+    padding-inline: 32px;
+    padding-block-start: fluid(32, 75, 375, 768);
+    padding-block-end: 32px;
+
     text-align: start;
     background-color: var(--clr-secondary-2);
 
@@ -180,6 +188,7 @@ main {
         font-size: var(--fs-2);
         line-height: var(--lh-2);
         letter-spacing: var(--ls-2-mob-tab);
+        max-inline-size: 15ch;
     }
 
     &__highlight {
@@ -198,5 +207,6 @@ main {
         line-height: var(--lh-2);
         letter-spacing: var(--ls-2-mob-tab);
         color: var(--clr-text-dark);
+        max-inline-size: 13ch;
     }
 }
