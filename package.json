@@ -1,6 +1,11 @@
 {
   "name": "bento-grid",
   "version": "1.0.0",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
   "description": "This is a solution to the [Bento grid challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bento-grid-RMydElrlOj). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
   "author": "Csaba Molnar (DocForLoop)",
   "license": "MIT",

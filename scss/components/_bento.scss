@@ -2,6 +2,8 @@
 
 body {
     min-height: 100vh;
+    display: grid;
+    place-content: center;
 }
 
 main {
@@ -9,6 +11,7 @@ main {
     padding-block-start: fluid(32, 52, 375, 768);
     padding-block-end: fluid(40, 75.69, 375, 768);
 }
+
 .features > div {
     border-radius: rem(10);
 }
@@ -86,8 +89,8 @@ main {
     overflow: clip;
 
     &__image {
-        width: rem(316); 
-        height: rem(66); 
+        inline-size: rem(316); 
+        block-size: rem(66); 
         object-fit: cover;
         object-position:left;
     }
@@ -159,10 +162,12 @@ main {
         max-inline-size: 11ch;
     }
 }
+.features-card-6-container {
+    background-color: var(--clr-text-light);
 
+}
 .features-card-6 {
     padding: 24px;
-    background-color: var(--clr-text-light);
 
     &__text-1 {
         font-size: var(--fs-1);

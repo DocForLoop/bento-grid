@@ -1,13 +1,13 @@
 @font-face {
   font-display: swap;
   font-family: "DM Sans";
-  src: url("../assets/fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype-variations");
+  src: url("../assets/fonts/DMSans-VariableFont.ttf") format("truetype-variations");
   font-weight: 400 500;
 }
 @font-face {
   font-display: swap;
   font-family: "DM Sans";
-  src: url("../assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf") format("truetype-variations");
+  src: url("../assets/fonts/DMSans-Italic-VariableFont.ttf") format("truetype-variations");
   font-weight: 500;
   font-style: italic;
 }
@@ -79,11 +79,10 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-} */
 body {
   min-height: 100vh;
+  display: grid;
+  place-content: center;
 }
 
 main {
@@ -155,8 +154,8 @@ main {
   overflow: clip;
 }
 .features-card-2__image {
-  width: 19.75rem;
-  height: 4.125rem;
+  inline-size: 19.75rem;
+  block-size: 4.125rem;
   object-fit: cover;
   object-position: left;
 }
@@ -220,9 +219,12 @@ main {
   max-inline-size: 11ch;
 }
 
+.features-card-6-container {
+  background-color: var(--clr-text-light);
+}
+
 .features-card-6 {
   padding: 24px;
-  background-color: var(--clr-text-light);
 }
 .features-card-6__text-1 {
   font-size: var(--fs-1);
@@ -276,6 +278,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   row-gap: 24px;
 }
 .features-card-1__figure {
@@ -300,6 +303,11 @@ main {
   row-gap: 16px;
 }
 
+.features-card-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .features-card-4__wrapper {
   display: flex;
   flex-direction: column;
@@ -372,5 +380,110 @@ main {
   }
   .features-card-7 {
     padding-inline: 24px;
+  }
+  .features-card-8__caption-text {
+    max-inline-size: 7ch;
+  }
+}
+@media (width > 56.25em) {
+  .features {
+    grid-template-areas: "c1 c1 c1" "c7 c4 c4" "c6 c4 c4" "c8 c2 c3" "c5 c5 c5";
+  }
+  .features-card-3 {
+    max-block-size: 100%;
+  }
+}
+@media (width > 67.1875em) {
+  main {
+    padding-inline: clamp(40px, -160.5937px + 22.2635vi, 160px);
+    padding-block-start: clamp(52px, 0.18px + 5.7514vi, 83px);
+    padding-block-end: 65px;
+  }
+  .features {
+    grid-template-areas: "c1 c1 c4" "c7 c2 c3" "c8 c6 c5";
+  }
+  .features-card-1 {
+    padding-inline: 32px;
+    padding-block: 62px;
+  }
+  .features-card-1__title {
+    letter-spacing: var(--ls-1-desk);
+  }
+  .features-card-4 {
+    padding-block: 32px;
+    padding-inline-start: 32px;
+    text-align: start;
+    justify-content: start;
+  }
+  .features-card-4__figure {
+    padding-inline: 0;
+    align-items: start;
+  }
+  .features-card-4__image {
+    inline-size: 22.3125rem;
+    block-size: 19.875rem;
+    object-fit: cover;
+    object-position: left;
+  }
+  .features-card-4__text {
+    padding-inline-start: 0;
+    padding-inline-end: 10px;
+    letter-spacing: var(--ls-3-desk);
+  }
+  .features-card-4__caption-text {
+    max-inline-size: 16ch;
+  }
+  .features-card-8 {
+    padding-inline-end: 12px;
+  }
+  .features-card-8__figure {
+    row-gap: clamp(24px, -28.6558px + 5.8442vi, 55.5px);
+  }
+  .features-card-8__caption-text {
+    letter-spacing: var(--ls-2-desk);
+  }
+  .features-card-8__image {
+    inline-size: 13.75rem;
+    block-size: auto;
+  }
+  .features-card-6 {
+    row-gap: clamp(24px, -18.4699px + 3.9507vi, 38.42px);
+  }
+  .features-card-6__text-1 {
+    letter-spacing: var(--ls-1-desk);
+  }
+  .features-card-2__image {
+    transform: translateX(0.21875rem);
+  }
+  .features-card-2__figure {
+    row-gap: 20.46px;
+  }
+  .features-card-2__caption-text {
+    max-inline-size: 9ch;
+    letter-spacing: var(--ls-3-desk);
+  }
+  .features-card-7 {
+    padding-inline: 32px;
+    padding-block-start: clamp(75px, 65.2808px + 0.9041vi, 78.3px);
+    padding-block-end: 32px;
+  }
+  .features-card-7__caption-text {
+    letter-spacing: var(--ls-2-desk);
+  }
+  .features-card-5__figure {
+    flex-direction: column;
+    gap: 11.32px;
+  }
+  .features-card-5__caption-text {
+    letter-spacing: var(--ls-2-desk);
+  }
+}
+@media (width > 78.125em) {
+  .features {
+    grid-template-rows: 20.25rem 3.6875rem 9.75rem 15.375rem;
+    grid-template-areas: "c7 c1 c1 c4" "c7 c2 c3 c4" "c8 c2 c3 c4" "c8 c6 c5 c5";
+  }
+  .features-card-5__figure {
+    flex-direction: row;
   }
 }/*# sourceMappingURL=style.css.map */
