@@ -20,8 +20,8 @@ This is a solution to the [Bento grid challenge on Frontend Mentor](https://www.
 
 ### Links
 
-- [Solution](https://www.frontendmentor.io/solutions/)
-- [Live Site](https://docforloop.github.io/)
+- [Solution](https://www.frontendmentor.io/solutions/bento-grid-with-grid-and-flexbox-0lztxKe8jg)
+- [Live Site](https://docforloop.github.io/bento-grid/)
 
 ## My process
 
