@@ -1,6 +1,10 @@
 {
   "name": "bento-grid",
   "version": "1.0.0",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",

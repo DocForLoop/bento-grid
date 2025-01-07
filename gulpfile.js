@@ -14,23 +14,23 @@ function scssDevTask() {
 }
 
 // Compile Sass for production
-function scssProdTask() {
+function scssBuildTask() {
     return src('scss/style.scss')
         .pipe(sass({ includePaths: ['./scss'] }).on('error', sass.logError))
         .pipe(postcss([autoprefixer(), cssnano()]))
-        .pipe(dest('docs/css'));
+        .pipe(dest('dist/css'));
 }
 
-// Clean docs folder
-function cleanDocs(done) {
-    rimraf.sync(['docs']);  
+// Clean dist folder
+function cleanDist(done) {
+    rimraf.sync(['dist']);  
     done();
 }
 
 // Copy HTML and Assets
 function copyFiles() {
     return src(['index.html', 'assets/**/*'], { base: '.' })
-        .pipe(dest('docs'));
+        .pipe(dest('dist'));
 }
 
 // Serve and reload
@@ -74,4 +74,4 @@ function watchTask() {
 exports.default = series(scssDevTask, browserSyncServe, watchTask);
 
 // Deploy Task
-exports.deploy = series(cleanDocs, scssProdTask, copyFiles);
+exports.build = series(cleanDist, scssBuildTask, copyFiles);
