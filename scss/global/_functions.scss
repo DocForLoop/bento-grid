@@ -36,7 +36,8 @@
   @return math.div($value, 16);
 }
 
-// Inspired by (https://chriskirknielsen.com/blog/modern-fluid-typography-with-clamp/),and it has been modified and streamlined for wider usage.
+// Inspired by Christopher Kirk-Nielsen's article (https://chriskirknielsen.com/blog/modern-fluid-typography-with-clamp/), 
+// I modified and turned it into a Sass function and streamlined for wider usage.
 @function fluid($min-value, $max-value, $min-vw, $max-vw, $unit:px) {
 
   // Check for valid units in the first four parameters
