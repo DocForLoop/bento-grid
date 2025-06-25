@@ -56,6 +56,7 @@ html {
 }
 
 body {
+  position: relative;
   background-color: var(--clr-bg);
   font-family: var(--ff-primary);
   font-weight: var(--fw-2);
@@ -265,6 +266,29 @@ main {
   letter-spacing: var(--ls-2-mob-tab);
   color: var(--clr-text-dark);
   max-inline-size: 13ch;
+}
+
+.attribution {
+  position: absolute;
+  inset-block-end: 10px;
+  inset-inline: 0;
+  font-size: 12px;
+  text-align: center;
+  color: var(--clr-text-dark);
+}
+
+.attribution__link {
+  border-radius: 3px;
+  color: var(--clr-text-dark);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+.attribution__link:hover, .attribution__link:focus-visible {
+  color: var(--clr-primary-1);
+}
+.attribution__link:focus-visible {
+  outline: 3px solid var(--clr-primary-1);
+  outline-offset: 2px;
 }
 
 .features {

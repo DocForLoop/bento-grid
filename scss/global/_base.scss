@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    position: relative;
     background-color: var(--clr-bg);
     font-family: var(--ff-primary);
     font-weight: var(--fw-2);
